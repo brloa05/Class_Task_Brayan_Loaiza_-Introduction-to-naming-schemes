@@ -1,18 +1,23 @@
-# Ejercicio 1 - Leyendo los valores de un objeto URL
+# Exercise 1 — Reading URL Components
 
-## Descripción
+A simple Java program that breaks down a URL into its individual parts using the `java.net.URL` class.
 
-Programa en Java que crea un objeto `URL` e imprime en pantalla los valores retornados por los 8 métodos de lectura disponibles en la clase `java.net.URL`.
+## What it does
 
----
+Given a URL like `http://ldbn.escuelaing.edu.co:80/index.html?query=test#seccion1`, the program prints each of the 8 components that Java can extract from it:
 
-## Solución
+| Method | Returns |
+|--------|---------|
+| `getProtocol()` | `http` |
+| `getAuthority()` | `ldbn.escuelaing.edu.co:80` |
+| `getHost()` | `ldbn.escuelaing.edu.co` |
+| `getPort()` | `80` |
+| `getPath()` | `/index.html` |
+| `getQuery()` | `query=test` |
+| `getFile()` | `/index.html?query=test` |
+| `getRef()` | `seccion1` |
 
-### Enfoque
-
-Se instancia un objeto `URL` con una dirección que contenga todos los componentes posibles (protocolo, host, puerto, path, query y fragmento), para que cada método retorne un valor visible al ejecutar el programa.
-
-### Clase: `URLInfo.java`
+## Code
 
 ```java
 import java.net.MalformedURLException;
@@ -23,14 +28,14 @@ public class URLInfo {
         try {
             URL url = new URL("http://ldbn.escuelaing.edu.co:80/index.html?query=test#seccion1");
 
-            System.out.println("Protocolo   : " + url.getProtocol());
-            System.out.println("Authority   : " + url.getAuthority());
-            System.out.println("Host        : " + url.getHost());
-            System.out.println("Puerto      : " + url.getPort());
-            System.out.println("Path        : " + url.getPath());
-            System.out.println("Query       : " + url.getQuery());
-            System.out.println("File        : " + url.getFile());
-            System.out.println("Ref         : " + url.getRef());
+            System.out.println("Protocol  : " + url.getProtocol());
+            System.out.println("Authority : " + url.getAuthority());
+            System.out.println("Host      : " + url.getHost());
+            System.out.println("Port      : " + url.getPort());
+            System.out.println("Path      : " + url.getPath());
+            System.out.println("Query     : " + url.getQuery());
+            System.out.println("File      : " + url.getFile());
+            System.out.println("Ref       : " + url.getRef());
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -39,31 +44,13 @@ public class URLInfo {
 }
 ```
 
-### Los 8 métodos utilizados
-
-| Método | Descripción | Ejemplo retornado |
-|--------|-------------|-------------------|
-| `getProtocol()` | Protocolo de la URL | `http` |
-| `getAuthority()` | Host + puerto | `ldbn.escuelaing.edu.co:80` |
-| `getHost()` | Nombre del servidor | `ldbn.escuelaing.edu.co` |
-| `getPort()` | Número de puerto | `80` |
-| `getPath()` | Ruta del recurso | `/index.html` |
-| `getQuery()` | Parámetros de consulta | `query=test` |
-| `getFile()` | Path completo + query | `/index.html?query=test` |
-| `getRef()` | Fragmento / ancla | `seccion1` |
-
----
-
-## Cómo ejecutar
+## How to run
 
 ```bash
 javac URLInfo.java
 java URLInfo
 ```
 
----
+## Evidence
 
-## Evidencia de ejecución
-
-<!-- Reemplaza esta línea con la captura de pantalla de la ejecución -->
-![img.png](img.png)
+![img.png](../image/ej1_img.png)
