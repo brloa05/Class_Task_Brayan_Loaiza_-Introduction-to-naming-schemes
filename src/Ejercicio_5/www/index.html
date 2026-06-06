@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor Web - Ejercicio 5</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        header {
+            background-color: #313244;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #89b4fa;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #a6adc8;
+            font-size: 0.95rem;
+        }
+
+        .card {
+            background-color: #313244;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            color: #cba6f7;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: #bac2de;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #45475a;
+            color: #a6e3a1;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #89b4fa;
+            color: #1e1e2e;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover { background-color: #b4befe; }
+
+        footer {
+            margin-top: 30px;
+            color: #585b70;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Servidor Web con Java Sockets</h1>
+        <p>Ejercicio 5 &mdash; ARSW 2026-i &mdash; Escuela Colombiana de Ingeniería</p>
+    </header>
+
+    <div class="card">
+        <h2>¿Qué es este servidor?</h2>
+        <p>Servidor HTTP implementado desde cero usando <strong>Sockets TCP</strong> en Java.
+        Soporta múltiples solicitudes seguidas y sirve archivos reales desde disco,
+        incluyendo páginas HTML e imágenes.</p>
+    </div>
+
+    <div class="card">
+        <h2>Tecnologías utilizadas</h2>
+        <span class="badge">Java</span>
+        <span class="badge">Sockets TCP</span>
+        <span class="badge">HTTP/1.1</span>
+        <span class="badge">ServerSocket</span>
+        <span class="badge">java.net</span>
+    </div>
+
+    <div class="card">
+        <h2>Páginas disponibles</h2>
+        <p>Navega a las siguientes rutas para probar el servidor:</p>
+        <br>
+        <a class="btn" href="pagina2.html">Ir a Página 2</a>
+    </div>
+
+    <footer>
+        <p>Servidor corriendo en localhost:35000</p>
+    </footer>
+
+</body>
+</html>
