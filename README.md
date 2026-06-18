@@ -265,17 +265,6 @@ javac TimeClient.java && java TimeClient
 
 **RMI (Remote Method Invocation)** permite invocar metodos de un objeto que vive en otra JVM como si fueran locales. Este ejercicio implementa un chat donde los clientes llaman metodos del servidor remotamente sin gestionar sockets a mano.
 
-### Arquitectura
-
-```
-ChatInterface  (contrato remoto — extiende Remote)
-     ↑
-ChatImpl       (implementacion en el servidor — extiende UnicastRemoteObject)
-     ↑
-ChatServer     (registra el servicio en el RMI Registry en el puerto 1099)
-ChatClient     (localiza el servicio y llama sus metodos remotamente)
-```
-
 ### API remota
 
 ```java
